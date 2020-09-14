@@ -1,0 +1,56 @@
+Git Repo:
+https://github.com/ARambazamba/ngDev
+
+Folien:
+https://tinyurl.com/y582u7h3
+
+
+Notizen:
+- NVM (Node Version Manager) ermöglicht mehrere Versionen gleichzeitig zu verwenden lokal
+	nvm -list
+	nvm install ...
+	nvm use 
+	npm i -g @angular/cli@9.1.12
+- Empfohlene Frameworks
+	ngrx
+	progressive web apps
+- NG:
+	ng s -o
+	ng g c <name> -d                 (dry run)
+	-- Hinzufügen von Abhängigkeiten
+	ng add @angular/material
+	ng build --prod
+
+	-- angular live server (dist folder)
+	npm i -g angular-http-server -> angular-http-server
+
+	-- Updating angular
+	ng update @angular/cli @angular/material --allow-dirty --force   (allow-dirty, force, nur bei cleanem repo machen !!!!)
+	update.angular.io
+	
+		
+- Visual Code:
+	* ALT + Linke Maustaste auf File öffnet im Split Modus
+	* ctrl + ö terminal toggle
+	* ctrl + p file öffnen
+	* Extensions:
+		- Fix JSON für VCS zum automatischen fixen von json 
+		- Angular Material Snippets
+		- Typescript importer
+
+
+- Typescript:
+	* https://github.com/airbnb/javascript (Style Guides von Airbnb für den Linter)
+
+- CSS:
+meyerweb.com css reset
+
+- Javascript im Browser
+* copy(data)  !!!
+* ng.getComponent($0) (zuerst im element auswählen und dann in der console)
+
+- Tools/Frameworks:
+* DisplayFusion Split Taskbar für mehrere Monitore
+* youtube channels: https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw
+* nest.js
+* Angular Augury
