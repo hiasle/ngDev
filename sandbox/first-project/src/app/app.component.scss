@@ -1,0 +1,19 @@
+.toolbar {
+  background-color: lightblue;
+  height: 2rem;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: lightcoral;
+  flex-grow: 1;
+}
+
+.main {
+  background-color: lightseagreen;
+  flex-grow: 5;
+}
