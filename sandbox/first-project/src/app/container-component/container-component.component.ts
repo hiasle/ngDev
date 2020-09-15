@@ -28,7 +28,7 @@ export class ContainerComponentComponent implements OnInit {
 
   onFoodSaved(f: Food): void {
     console.log('saving to service:', f);
-    const existing: Food = this.foods.find((i) => i.id == f.id);
+    const existing: Food = this.foods.find((i) => i.id === f.id);
     if (existing != null) {
       Object.assign(existing, f);
     } else {
