@@ -1,7 +1,34 @@
-<input type="text" placeholder="Enter Foodname" [(ngModel)]="food.foodName" />
+<h3 style="margin-top: 50px">Edit entry:</h3>
+<div style="display: flex; flex-direction: column; width: 50%">
+  <div style="display: flex; justify-content: space-between">
+    <label for="foodname">Foodname:</label>
+    <input
+      id="foodname"
+      type="text"
+      placeholder="Enter Foodname"
+      [(ngModel)]="food.foodName"
+    />
+  </div>
 
-<input type="text" placeholder="Enter FoodType" [(ngModel)]="food.foodType" />
+  <div style="display: flex; justify-content: space-between">
+    <label for="foodtype">Footype:</label>
+    <input
+      id="foodtype"
+      type="text"
+      placeholder="Enter FoodType"
+      [(ngModel)]="food.foodType"
+    />
+  </div>
 
-<input type="text" placeholder="Enter Calories" [(ngModel)]="food.calories" />
+  <div style="display: flex; justify-content: space-between">
+    <label for="calories">Calories:</label>
+    <input
+      id="calories"
+      type="text"
+      placeholder="Enter Calories"
+      [(ngModel)]="food.calories"
+    />
+  </div>
 
-<button (click)="doSave()" color="primary">Save</button>
+  <button (click)="doSave()" color="primary">Save</button>
+</div>
