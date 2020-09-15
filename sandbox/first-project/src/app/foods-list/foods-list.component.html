@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Foodname</th>
+      <th>FoodType</th>
+      <th>Calories</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of foods">
+      <td>{{ f.foodName }}</td>
+      <td>{{ f.foodType }}</td>
+      <td>{{ f.calories }}</td>
+      <td><a (click)="selectFood(f)">Select</a></td>
+    </tr>
+  </tbody>
+</table>

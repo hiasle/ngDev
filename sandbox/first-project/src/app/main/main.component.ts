@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService } from '../data/person.service';
-import { Person } from '../data/person';
+import { FoodService } from '../data/food.service';
 
 @Component({
   selector: 'app-main',
@@ -8,9 +7,9 @@ import { Person } from '../data/person';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  constructor(private ps: PersonService) {}
+  constructor(private fs: FoodService) {}
 
-  persons = this.ps.getAllPersons();
+  foods = this.fs.getAllFoods();
 
   ngOnInit(): void {}
 }
