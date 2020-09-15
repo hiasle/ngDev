@@ -2,6 +2,8 @@
 
 [Angular Template Syntax](https://stackblitz.com/edit/ng10-template-syntax?file=src/app/app.component.html)
 
+[Frequently-used modules]https://angular.io/guide/frequent-ngmodules
+
 ## Configure Creation of Unit Test Files - \*.spec.ts
 
 Method 1:

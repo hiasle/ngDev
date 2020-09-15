@@ -3,7 +3,14 @@ https://github.com/ARambazamba/ngDev
 
 Folien:
 https://tinyurl.com/y582u7h3
+https://integrationsonline-my.sharepoint.com/personal/alexander_pajer_integrations_at/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Falexander%5Fpajer%5Fintegrations%5Fat%2FDocuments%2FngDev&originalPath=aHR0cHM6Ly9pbnRlZ3JhdGlvbnNvbmxpbmUtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvYWxleGFuZGVyX3BhamVyX2ludGVncmF0aW9uc19hdC9FcjhnbUg0bWQ1UkZnTm9kUUgxbWlDY0J2RENEM2FmbkRDX3d5M180bUhkY0x3P3J0aW1lPUg1OUM4MFZaMkVn
 
+Angular:
+Frequently used modules: https://angular.io/guide/frequent-ngmodules
+Material Compnent Library: material.angular.io
+- Patterns:
+	* Container-Presenter Pattern
+	* shallow copy { ...variable }
 
 Notizen:
 - NVM (Node Version Manager) ermöglicht mehrere Versionen gleichzeitig zu verwenden lokal
@@ -14,9 +21,13 @@ Notizen:
 - Empfohlene Frameworks
 	ngrx
 	progressive web apps
+	json-server (json file als server)
 - NG:
 	ng s -o
+	-- anlegen von components
 	ng g c <name> -d                 (dry run)
+	-- anlegen von components und registrieren in ...
+	ng g c skills/skill -m app.module.ts
 	-- Hinzufügen von Abhängigkeiten
 	ng add @angular/material
 	ng build --prod
