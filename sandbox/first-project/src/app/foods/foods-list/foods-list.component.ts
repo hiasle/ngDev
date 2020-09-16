@@ -10,6 +10,8 @@ export class FoodsListComponent implements OnInit {
   @Input() foods: Food[];
   @Output() foodSelected: EventEmitter<Food> = new EventEmitter();
 
+  displayedColumns: string[] = ['id', 'name', 'type', 'calories'];
+
   constructor() {}
 
   ngOnInit(): void {}

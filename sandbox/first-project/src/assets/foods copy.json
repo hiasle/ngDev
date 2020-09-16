@@ -67,5 +67,55 @@
     "foodName": "Barbacoa Burrito Bowl",
     "foodType": "Burrito Bowl",
     "calories": 620
+  },
+  { "id": 14, "foodName": "Barbacoa Bowl", "calories": 620 },
+  {
+    "id": 15,
+    "foodName": "Chorizo Burrito Bowl",
+    "foodType": "Burrito Bowl",
+    "calories": 750
+  },
+  { "id": 16, "foodName": "Chorizo Bowl", "calories": 750 },
+  {
+    "id": 17,
+    "foodName": "Sofritas Burrito Bowl",
+    "foodType": "Burrito Bowl",
+    "calories": 600
+  },
+  { "id": 18, "foodName": "Sofritas Bowl", "calories": 600 },
+  {
+    "id": 19,
+    "foodName": "Chicken Corn Tortilla Taco",
+    "foodType": "Taco",
+    "protein": "chicken",
+    "calories": 650
+  },
+  {
+    "id": 20,
+    "foodName": "Chicken Flour Tortilla Taco",
+    "foodType": "Taco",
+    "protein": "chicken",
+    "calories": 700
+  },
+  {
+    "id": 21,
+    "foodName": "Steak Corn Tortilla Taco",
+    "foodType": "Taco",
+    "protein": "steak",
+    "calories": 620
+  },
+  {
+    "id": 22,
+    "foodName": "Steak Flour Tortilla Taco",
+    "foodType": "Taco",
+    "protein": "steak",
+    "calories": 670
+  },
+  {
+    "id": 23,
+    "foodName": "Carnitas Corn Tortilla Taco",
+    "foodType": "Taco",
+    "protein": "carnitas",
+    "calories": 680
   }
 ]
