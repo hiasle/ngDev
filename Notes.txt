@@ -31,6 +31,8 @@ Notizen:
 	-- Hinzufügen von Abhängigkeiten
 	ng add @angular/material
 	ng build --prod
+	-- generate module in parent module witht custom route
+	ng g module xxx --route xxx --module app.module.ts
 
 	-- angular live server (dist folder)
 	npm i -g angular-http-server -> angular-http-server
@@ -65,3 +67,5 @@ meyerweb.com css reset
 * youtube channels: https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw
 * nest.js
 * Angular Augury
+
+

@@ -13,8 +13,9 @@ export class PmChildComponent implements OnInit {
   readonly: boolean;
 
   ngOnInit() {
+    console.log('ng-oninit-pm-child');
     this.useSnapShot();
-    // this.useParamMap();
+    this.useParamMap();
   }
 
   useSnapShot() {
