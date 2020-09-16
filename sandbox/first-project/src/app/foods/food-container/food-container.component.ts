@@ -36,4 +36,11 @@ export class FoodContainerComponent implements OnInit {
     console.log('foods array after save', this.foods);
     this.current = null;
   }
+
+  onFoodAdd(f: Food): void {
+    f.id = this.foods.length + 1;
+    const newFoodList = Object.assign([], this.foods);
+    newFoodList.push(f);
+    this.foods = newFoodList;
+  }
 }

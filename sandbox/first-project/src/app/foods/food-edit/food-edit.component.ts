@@ -10,6 +10,7 @@ export class FoodEditComponent implements OnInit {
   @Input() food: Food;
   @Input() editMode: boolean;
   @Output() saveFood: EventEmitter<Food> = new EventEmitter();
+  @Output() addFood: EventEmitter<Food> = new EventEmitter();
 
   constructor() {}
 
@@ -17,6 +18,10 @@ export class FoodEditComponent implements OnInit {
 
   doSave(): void {
     this.saveFood.emit(this.food);
+  }
+
+  doAdd(): void {
+    this.addFood.emit(this.food);
   }
 
   doDelete(): void {

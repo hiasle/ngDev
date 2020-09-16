@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { FoodContainerComponent } from './food-container/food-container.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [FoodEditComponent, FoodsListComponent, FoodContainerComponent],
@@ -17,6 +18,7 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatCardModule,
     MatTableModule,
+    MatInputModule,
   ],
 })
 export class FoodsModule {}
