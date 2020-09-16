@@ -1,39 +1,49 @@
-<mat-card style="width: 50%; background-color: grey">
+<mat-card style="width: 100%; background-color: lightgrey">
   <mat-card-header>
     <mat-card-title>Edit entry</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <div style="display: flex; justify-content: space-between">
-      <label for="foodname">Foodname:</label>
-      <input
-        id="foodname"
-        type="text"
-        placeholder="Enter Foodname"
-        [(ngModel)]="food.foodName"
-      />
+  <mat-card-content style="display: flex">
+    <mat-form-field class="example-full-width">
+      <mat-label>Foodname</mat-label>
+      <input matInput placeholder="Ex. Burrito" [(ngModel)]="food.foodName" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Footype</mat-label>
+      <input matInput placeholder="Ex. Burrito" [(ngModel)]="food.foodType" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Calories</mat-label>
+      <input matInput placeholder="Ex. 100" [(ngModel)]="food.calories" />
+    </mat-form-field>
+
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button
+            mat-fab
+            color="primary"
+            (click)="doSave()"
+            aria-label="Example icon button with a delete icon"
+          >
+            <mat-icon>save</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button
+            mat-fab
+            color="accent"
+            (click)="doAdd()"
+            aria-label="Example icon button with a bookmark icon"
+          >
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div style="display: flex; justify-content: space-between">
-      <label for="foodtype">Footype:</label>
-      <input
-        id="foodtype"
-        type="text"
-        placeholder="Enter FoodType"
-        [(ngModel)]="food.foodType"
-      />
-    </div>
-
-    <div style="display: flex; justify-content: space-between">
-      <label for="calories">Calories:</label>
-      <input
-        id="calories"
-        type="text"
-        placeholder="Enter Calories"
-        [(ngModel)]="food.calories"
-      />
-    </div>
-
-    <button (click)="doSave()" color="primary">Save</button>
-    <button (click)="doAdd()" color="primary">AddNew</button>
+    <!-- <button (click)="doSave()" color="primary">Save</button>
+    <button (click)="doAdd()" color="primary">AddNew</button> -->
   </mat-card-content>
 </mat-card>

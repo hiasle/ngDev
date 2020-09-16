@@ -9,6 +9,7 @@ import { FoodContainerComponent } from './food-container/food-container.componen
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [FoodEditComponent, FoodsListComponent, FoodContainerComponent],
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatTableModule,
     MatInputModule,
+    MatIconModule,
   ],
 })
 export class FoodsModule {}

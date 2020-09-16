@@ -42,5 +42,6 @@ export class FoodContainerComponent implements OnInit {
     const newFoodList = Object.assign([], this.foods);
     newFoodList.push(f);
     this.foods = newFoodList;
+    this.current = null;
   }
 }
