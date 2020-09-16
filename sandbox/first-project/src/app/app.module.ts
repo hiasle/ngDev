@@ -9,9 +9,9 @@ import { MainComponent } from './main/main.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponentComponent } from './container-component/container-component.component';
-import { FoodsListComponent } from './foods-list/foods-list.component';
-import { FoodEditComponent } from './food-edit/food-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FoodsModule } from './foods/foods.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -20,10 +20,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     MainComponent,
     ContainerComponentComponent,
-    FoodsListComponent,
-    FoodEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    FoodsModule,
+    MatToolbarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

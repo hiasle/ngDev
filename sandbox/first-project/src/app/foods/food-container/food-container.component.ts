@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Food } from '../foods/data/food';
-import { FoodService } from '../foods/data/food.service';
+import { FoodService } from '../data/food.service';
+import { Food } from '../data/food';
 
 @Component({
-  selector: 'app-container-component',
-  templateUrl: './container-component.component.html',
-  styleUrls: ['./container-component.component.scss'],
+  selector: 'app-food-container',
+  templateUrl: './food-container.component.html',
+  styleUrls: ['./food-container.component.scss'],
 })
-export class ContainerComponentComponent implements OnInit {
+export class FoodContainerComponent implements OnInit {
   constructor(private fs: FoodService) {}
 
   foods: Food[];
