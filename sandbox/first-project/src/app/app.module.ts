@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponentComponent } from './container-component/container-component.component';
 import { FoodsListComponent } from './foods-list/foods-list.component';
 import { FoodEditComponent } from './food-edit/food-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { FoodEditComponent } from './food-edit/food-edit.component';
     FoodsListComponent,
     FoodEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
