@@ -57,6 +57,8 @@ Notizen:
 
 - CSS:
 meyerweb.com css reset
+https://sass-lang.com/
+!!! Tip: Nicht im  assets Ordner ablegen !!!
 
 - Javascript im Browser
 * copy(data)  !!!
