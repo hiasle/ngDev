@@ -32,6 +32,7 @@ export class FoodContainerComponent implements OnInit {
       Object.assign(existing, f);
     } else {
       const copy = this.foods;
+      f.id = this.foods.length + 1;
       copy.push(f);
       this.foods = Object.assign([], copy);
     }
