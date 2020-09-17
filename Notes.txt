@@ -16,6 +16,7 @@ http://reactivex.io/
 https://rxjs-dev.firebaseapp.com/
 https://www.learnrxjs.io/
 https://www.youtube.com/watch?v=ei7FsoXKPl0 (Video)
+Subscribe/Unsubscribe Libs: subsink
 
 Notizen:
 - NVM (Node Version Manager) ermöglicht mehrere Versionen gleichzeitig zu verwenden lokal
