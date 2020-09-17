@@ -7,6 +7,7 @@ import {
   of,
   Subscription,
   throwError,
+  from,
 } from 'rxjs';
 import { catchError, delay, finalize, map, take, tap } from 'rxjs/operators';
 import { isArray } from 'util';
@@ -55,13 +56,23 @@ export class OperatorsComponent implements OnInit {
   }
 
   useMapAndTap() {
-    this.vs
-      .getVouchers()
+    // this.vs
+    //   .getVouchers()
+    //   .pipe(
+    //     tap((data) => console.log('logged using tap() operator: ', data)),
+    //     map((va) => va.map(this.setLabel))
+    //   )
+    //   .subscribe((data) => this.log('use pipe(), map() & tap()', data));
+
+    from([2, 10, 20])
       .pipe(
-        tap((data) => console.log('logged using tap() operator: ', data)),
-        map((va) => va.map(this.setLabel))
+        tap((i) => {
+          console.log('Tap before', i);
+          i = i * 2;
+          console.log('Tap after', i);
+        })
       )
-      .subscribe((data) => this.log('use pipe(), map() & tap()', data));
+      .subscribe((item) => console.log('result', item));
   }
 
   errHandling() {
