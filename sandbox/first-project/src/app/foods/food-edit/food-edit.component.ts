@@ -49,12 +49,11 @@ export class FoodEditComponent implements OnInit {
     });
   }
 
-  doSave(): void {
-    this.saveFood.emit(this.food);
-  }
-
   saveFoodForm(foodForm): void {
     console.log('Save: ' + foodForm);
+    const changed = Object.assign(this.food, foodForm.value);
+    this.food = changed;
+    this.saveFood.emit(this.food);
   }
 
   doAdd(): void {

@@ -59,48 +59,14 @@
         </mat-error>
       </mat-form-field>
 
-      <button mat-raised-button type="submit">Save</button>
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="foodForm.valid === false"
+      >
+        Save
+      </button>
     </form>
-
-    <!-- <mat-form-field class="example-full-width">
-      <mat-label>Foodname</mat-label>
-      <input matInput placeholder="Ex. Burrito" [(ngModel)]="food.foodName" />
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Footype</mat-label>
-      <input matInput placeholder="Ex. Burrito" [(ngModel)]="food.foodType" />
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Calories</mat-label>
-      <input matInput placeholder="Ex. 100" [(ngModel)]="food.calories" />
-    </mat-form-field> -->
-
-    <!-- <div class="example-button-row">
-      <div class="example-flex-container">
-        <div class="example-button-container">
-          <button
-            mat-fab
-            color="primary"
-            (click)="doSave()"
-            aria-label="Example icon button with a delete icon"
-          >
-            <mat-icon>save</mat-icon>
-          </button>
-        </div>
-        <div class="example-button-container">
-          <button
-            mat-fab
-            color="accent"
-            (click)="doAdd()"
-            aria-label="Example icon button with a bookmark icon"
-          >
-            <mat-icon>add_circle</mat-icon>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
     <!-- <button (click)="doSave()" color="primary">Save</button>
     <button (click)="doAdd()" color="primary">AddNew</button> -->

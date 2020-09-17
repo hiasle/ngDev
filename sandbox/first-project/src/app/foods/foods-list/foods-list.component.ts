@@ -10,7 +10,7 @@ export class FoodsListComponent implements OnInit {
   @Input() foods: Food[];
   @Output() foodSelected: EventEmitter<Food> = new EventEmitter();
 
-  displayedColumns: string[] = ['id', 'name', 'type', 'calories'];
+  displayedColumns: string[] = ['id', 'name', 'type', 'calories', 'actions'];
 
   constructor() {}
 
@@ -18,5 +18,9 @@ export class FoodsListComponent implements OnInit {
 
   selectFood(f: Food): void {
     this.foodSelected.emit(f);
+  }
+
+  delete(f: Food): void {
+    this.foods = this.foods.filter((item) => item.id !== f.id);
   }
 }

@@ -1,23 +1,4 @@
 <mat-card>
-  <!-- <table>
-    <thead>
-      <tr>
-        <th>Foodname</th>
-        <th>FoodType</th>
-        <th>Calories</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let f of foods">
-        <td>{{ f.foodName }}</td>
-        <td>{{ f.foodType }}</td>
-        <td>{{ f.calories }}</td>
-        <td><a (click)="selectFood(f)">Select</a></td>
-      </tr>
-    </tbody>
-  </table> -->
-
   <table mat-table [dataSource]="foods" class="mat-elevation-z8">
     <!-- ID Column -->
     <ng-container matColumnDef="id">
@@ -43,11 +24,29 @@
       <td mat-cell *matCellDef="let element">{{ element.calories }}</td>
     </ng-container>
 
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-fab
+          color="primary"
+          (click)="delete(element)"
+          aria-label="Example icon button with a delete icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button
+          mat-fab
+          color="primary"
+          (click)="selectFood(element)"
+          aria-label="Example icon button with a delete icon"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr
-      mat-row
-      *matRowDef="let row; columns: displayedColumns"
-      (click)="selectFood(row)"
-    ></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </mat-card>
