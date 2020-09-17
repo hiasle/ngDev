@@ -1,4 +1,6 @@
 <mat-card>
+  <button mat-raised-button (click)="addFood()">Add Food</button>
+
   <table mat-table [dataSource]="foods" class="mat-elevation-z8">
     <!-- ID Column -->
     <ng-container matColumnDef="id">

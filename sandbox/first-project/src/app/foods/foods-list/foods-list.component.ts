@@ -23,4 +23,8 @@ export class FoodsListComponent implements OnInit {
   delete(f: Food): void {
     this.foods = this.foods.filter((item) => item.id !== f.id);
   }
+
+  addFood(): void {
+    this.foodSelected.emit(new Food());
+  }
 }
