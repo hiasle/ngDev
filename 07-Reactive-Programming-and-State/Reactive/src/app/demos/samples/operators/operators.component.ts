@@ -92,14 +92,14 @@ export class OperatorsComponent implements OnInit {
   useFind() {
     this.vs
       .getVouchers()
-      .pipe(map((v) => v.find((v: Voucher) => v.ID == 3)))
+      .pipe(map((arr) => arr.find((v: Voucher) => v.ID == 3)))
       .subscribe((data) => this.log('getByID - using find()', data));
   }
 
   useFilter() {
     this.vs
       .getVouchers()
-      .pipe(map((v) => v.filter((v: Voucher) => v.Paid)))
+      .pipe(map((arr) => arr.filter((v: Voucher) => v.Paid)))
       .subscribe((data) => this.log('useFilter', data));
   }
 
