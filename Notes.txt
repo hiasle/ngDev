@@ -11,6 +11,10 @@ Material Compnent Library: material.angular.io
 - Patterns:
 	* Container-Presenter Pattern
 	* shallow copy { ...variable }
+RxJS
+http://reactivex.io/
+https://rxjs-dev.firebaseapp.com/
+https://www.youtube.com/watch?v=ei7FsoXKPl0 (Video)
 
 Notizen:
 - NVM (Node Version Manager) ermöglicht mehrere Versionen gleichzeitig zu verwenden lokal
