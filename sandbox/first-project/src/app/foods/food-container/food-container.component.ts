@@ -25,6 +25,10 @@ export class FoodContainerComponent implements OnInit {
     console.log('Foods array after save', this.foods);
   }
 
+  onFoodDelete(f: Food): void {
+    this.foods = this.foods.filter((item) => item.id !== f.id);
+  }
+
   onFoodSaved(f: Food): void {
     console.log('saving to service:', f);
     const existing: Food = this.foods.find((i) => i.id === f.id);
