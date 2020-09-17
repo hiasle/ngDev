@@ -3,7 +3,66 @@
     <mat-card-title>Edit entry</mat-card-title>
   </mat-card-header>
   <mat-card-content style="display: flex">
-    <mat-form-field class="example-full-width">
+    <form
+      [formGroup]="foodForm"
+      (ngSubmit)="saveFoodForm(foodForm)"
+      role="form"
+      novalidate
+      fxLayout="column"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          placeholder="Foodname"
+          formControlName="foodName"
+        />
+        <mat-error
+          *ngIf="
+            foodForm.get('foodName').errors != undefined &&
+            foodForm.controls['foodName'].errors != undefined
+          "
+        >
+          Foodname must be given!
+        </mat-error>
+        <mat-error *ngIf="violatesMinLength()">
+          Foodname is required (minimum 3 characters)!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          placeholder="Foodtype"
+          formControlName="foodType"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          placeholder="Calories"
+          formControlName="calories"
+        />
+        <mat-error
+          *ngIf="
+            foodForm.get('calories').errors != undefined &&
+            foodForm.controls['calories'].errors != undefined
+          "
+        >
+          Calories must be given!
+        </mat-error>
+        <mat-error *ngIf="violatesMinSize()">
+          Calories must be greater than 0!
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit">Save</button>
+    </form>
+
+    <!-- <mat-form-field class="example-full-width">
       <mat-label>Foodname</mat-label>
       <input matInput placeholder="Ex. Burrito" [(ngModel)]="food.foodName" />
     </mat-form-field>
@@ -16,9 +75,9 @@
     <mat-form-field class="example-full-width">
       <mat-label>Calories</mat-label>
       <input matInput placeholder="Ex. 100" [(ngModel)]="food.calories" />
-    </mat-form-field>
+    </mat-form-field> -->
 
-    <div class="example-button-row">
+    <!-- <div class="example-button-row">
       <div class="example-flex-container">
         <div class="example-button-container">
           <button
@@ -41,7 +100,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- <button (click)="doSave()" color="primary">Save</button>
     <button (click)="doAdd()" color="primary">AddNew</button> -->

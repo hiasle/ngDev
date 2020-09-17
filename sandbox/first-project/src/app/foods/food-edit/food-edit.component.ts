@@ -1,5 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Food } from '../data/food';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  ValidationErrors,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-food-edit',
@@ -12,12 +18,43 @@ export class FoodEditComponent implements OnInit {
   @Output() saveFood: EventEmitter<Food> = new EventEmitter();
   @Output() addFood: EventEmitter<Food> = new EventEmitter();
 
-  constructor() {}
+  foodForm: FormGroup;
 
-  ngOnInit(): void {}
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    // this.foodForm.patchValue(this.food);
+    this.initForm();
+    this.subscribeChanges();
+  }
+
+  ngOnChanges(): void {
+    this.initForm();
+  }
+
+  private initForm(): void {
+    this.foodForm = this.fb.group({
+      foodName: [
+        this.food.foodName,
+        [Validators.required, Validators.minLength(3)],
+      ],
+      foodType: [this.food.foodType],
+      calories: [this.food.calories, [Validators.required, Validators.min(0)]],
+    });
+  }
+
+  private subscribeChanges(): void {
+    this.foodForm.valueChanges.subscribe((vals) => {
+      console.log('changes happening @form: ', vals);
+    });
+  }
 
   doSave(): void {
     this.saveFood.emit(this.food);
+  }
+
+  saveFoodForm(foodForm): void {
+    console.log('Save: ' + foodForm);
   }
 
   doAdd(): void {
@@ -26,5 +63,31 @@ export class FoodEditComponent implements OnInit {
 
   doDelete(): void {
     console.log(`deleting ${this.food.foodName}`);
+  }
+
+  violatesMinLength(): boolean {
+    let result = false;
+    const errs: ValidationErrors = this.foodForm.controls.foodName.errors;
+
+    if (errs != null) {
+      console.log('Errors in Name field: ', errs);
+      if (errs['minlength']) {
+        result = true;
+      }
+    }
+    return result;
+  }
+
+  violatesMinSize(): boolean {
+    let result = false;
+    const errs: ValidationErrors = this.foodForm.controls.calories.errors;
+
+    if (errs != null) {
+      console.log('Errors in Name field: ', errs);
+      if (errs['min']) {
+        result = true;
+      }
+    }
+    return result;
   }
 }
