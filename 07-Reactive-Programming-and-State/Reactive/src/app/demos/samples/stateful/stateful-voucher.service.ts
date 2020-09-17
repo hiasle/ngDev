@@ -21,19 +21,18 @@ export class StatefulVoucherService {
     this.vouchersArray
   );
 
+  url = environment.apiUrl;
+
   private initData() {
-    this.httpClient
-      .get<Voucher[]>(`${environment.apiUrl}`)
-      .subscribe((data) => {
-        this.vouchersArray = data;
-        this.vouchers.next(this.vouchersArray);
-      });
+    this.httpClient.get<Voucher[]>(this.url).subscribe((data) => {
+      this.vouchersArray = data;
+      this.vouchers.next(this.vouchersArray);
+    });
   }
 
   addLateVoucher() {
     setTimeout(() => {
-      this.vouchersArray.push(lateVoucher as Voucher);
-      this.vouchers.next(this.vouchersArray);
+      this.insertVoucher(lateVoucher as Voucher);
     }, 5000);
   }
 
@@ -46,11 +45,22 @@ export class StatefulVoucherService {
   }
 
   insertVoucher(v: Voucher): any {
-    this.vouchersArray.push(v);
-    this.vouchers.next(this.vouchersArray);
+    // in real life
+    // 1. db schicken
+    // 2. dann behaviour subject refreshen
+    this.httpClient.post(this.url, v).subscribe((v: any) => {
+      this.vouchersArray.push(v);
+      this.vouchers.next(this.vouchersArray);
+    });
+
+    // this.vouchersArray.push(v);
+    // this.vouchers.next(this.vouchersArray);
   }
 
   updateVoucher(v: Voucher): any {}
 
-  deleteVoucher(id: number) {}
+  deleteVoucher(id: number) {
+    this.vouchersArray = this.vouchersArray.filter((v) => v.ID !== id);
+    this.vouchers.next(this.vouchersArray);
+  }
 }
