@@ -31,7 +31,9 @@ export class FoodContainerComponent implements OnInit {
     if (existing != null) {
       Object.assign(existing, f);
     } else {
-      this.foods.push(f);
+      const copy = this.foods;
+      copy.push(f);
+      this.foods = Object.assign([], copy);
     }
     console.log('foods array after save', this.foods);
     this.current = null;
