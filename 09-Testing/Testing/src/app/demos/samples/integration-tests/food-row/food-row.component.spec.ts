@@ -13,16 +13,15 @@ describe('Food Row Integration Test', () => {
       schemas: [NO_ERRORS_SCHEMA],
     });
     fixture = TestBed.createComponent(FoodRowComponent);
+    fixture.componentInstance.food = { name: 'Pad Thai', rating: 5 };
+    fixture.detectChanges();
   });
 
   it('should have the correct food item', () => {
-    fixture.componentInstance.food = { name: 'Pad Thai', rating: 5 };
     expect(fixture.componentInstance.food.name).toEqual('Pad Thai');
   });
 
   it('should render the food name', () => {
-    fixture.componentInstance.food = { name: 'Pad Thai', rating: 5 };
-    fixture.detectChanges();
     expect(
       fixture.nativeElement.querySelector('#itemName').textContent
     ).toContain('Pad Thai');
