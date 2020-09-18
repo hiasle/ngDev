@@ -46,8 +46,6 @@ describe('Testing a simple Calss: VoucherValidator', () => {
     };
   });
 
-  it('Test', () => {});
-
   it('returns true when correct data is passed', () => {
     expect(VoucherValidator.validate(goodvoucher)).toEqual(true);
   });
