@@ -60,6 +60,7 @@ Notizen:
 
 - Typescript:
 	* https://github.com/airbnb/javascript (Style Guides von Airbnb für den Linter)
+	* Date/Time Library (date-fns)
 
 - CSS:
 meyerweb.com css reset
@@ -71,9 +72,12 @@ https://sass-lang.com/
 * ng.getComponent($0) (zuerst im element auswählen und dann in der console)
 
 - Tools/Frameworks:
-* DisplayFusion Split Taskbar für mehrere Monitore
-* youtube channels: https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw
-* nest.js
-* Angular Augury
+	* DisplayFusion Split Taskbar für mehrere Monitore
+	* youtube channels: https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw
+	* nest.js
+	* Angular Augury
+	* Wallaby Extension visual code (Testing)
+	* Test Explorer UI
+	* Jasmine code snippets extension
 
 
