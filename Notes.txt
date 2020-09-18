@@ -11,6 +11,8 @@ Material Compnent Library: material.angular.io
 - Patterns:
 	* Container-Presenter Pattern
 	* shallow copy { ...variable }
+https://www.youtube.com/channel/UCm9iiIfgmVODUJxINecHQkA
+
 RxJS
 http://reactivex.io/
 https://rxjs-dev.firebaseapp.com/
