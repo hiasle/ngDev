@@ -79,5 +79,7 @@ https://sass-lang.com/
 	* Wallaby Extension visual code (Testing)
 	* Test Explorer UI
 	* Jasmine code snippets extension
-
-
+	* Email This chrome extension
+	* https://jwt.io/
+	* Firebase (Google) Token Authentication frei
+		- https://firebase.google.com/docs/auth
