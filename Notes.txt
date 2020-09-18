@@ -83,3 +83,6 @@ https://sass-lang.com/
 	* https://jwt.io/
 	* Firebase (Google) Token Authentication frei
 		- https://firebase.google.com/docs/auth
+
+- Other:
+	https://www.trekkinn.com/
